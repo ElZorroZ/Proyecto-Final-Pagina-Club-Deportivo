@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Club Almagro</title>
+  <link rel="stylesheet" href="index_styles.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container header">
+      <a href="index.html" aria-label="Página principal Club Almagro">
+        <img src="img/logo.png" alt="Logo del Club Almagro" class="logo" />
+      </a>
+      <nav aria-label="Menú principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="WEB/publicacion/publicacion_index.html">Novedades</a></li>
+          <li class="dropdown">
+            <a href="#">Club</a>
+            <ul class="dropdown-menu">
+              <li><a href="WEB/historia/historia_index.html">Historia</a></li>
+              <li><a href="WEB/estatuto/estatuto_index.html">Estatuto</a></li>
+              <li><a href="WEB/autoridades/autoridades_index.html">Autoridades</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#">Plantel</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Ejemplo 1</a></li>
+              <li><a href="#">Ejemplo 2</a></li>
+              <li><a href="#">Ejemplo 3</a></li>
+            </ul>
+          </li>
+          <li><a href="fixture.html">Fixture</a></li>
+          <li><a href="actividades.html">Actividades</a></li>
+          <li><a href="tienda.html">Tienda</a></li>
+          <li><a class="btn-login" href="login.html">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero principal -->
+    <section class="hero">
+      <img src="img/hero-almagro.png" alt="Imagen Hero" class="hero-img">
+      <div class="hero-content">
+        <h1>Club Almagro</h1>
+        <p>Un sentimiento, no traten de entenderlo</p>
+        <a href="#actividades" class="btn">Conocé nuestras actividades</a>
+      </div>
+    </section>
+
+
+    <!-- Actividades destacadas -->
+    <section class="actividades" id="actividades" aria-label="Actividades destacadas">
+      <h2>Actividades Destacadas</h2>
+      <div class="cards container">
+        <article class="card" tabindex="0" aria-label="Actividad fútbol">Fútbol</article>
+        <article class="card" tabindex="0" aria-label="Actividad básquet">Básquet</article>
+        <article class="card" tabindex="0" aria-label="Actividad vóley">Vóley</article>
+        <article class="card" tabindex="0" aria-label="Actividad gimnasio">Gimnasio</article>
+      </div>
+    </section>
+
+    <!-- Próximos partidos / fixtures -->
+    <section class="fixtures" id="fixtures" aria-label="Próximos partidos">
+      <h2>Próximos Partidos</h2>
+      <div class="container">
+        <table>
+          <thead>
+            <tr>
+              <th>Deporte</th>
+              <th>Fecha</th>
+              <th>Rival</th>
+              <th>Localía</th>
+              <th>Resultado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Fútbol</td>
+              <td>18/05/2025</td>
+              <td>Club Deportivo</td>
+              <td>Local</td>
+              <td>2 - 1</td>
+            </tr>
+            <tr>
+              <td>Básquet</td>
+              <td>19/05/2025</td>
+              <td>Club Amigos</td>
+              <td>Visitante</td>
+              <td>78 - 82</td>
+            </tr>
+          </tbody>
+        </table>
+        <a href="fixture.html" class="btn" role="button" aria-label="Ver más partidos">Ver más partidos</a>
+      </div>
+    </section>
+
+    <!-- Tienda destacada -->
+    <section class="tienda" id="tienda" aria-label="Productos destacados">
+      <h2>Productos Destacados</h2>
+      <ul class="productos container">
+        <li class="producto" tabindex="0">
+          <img src="camiseta.jpg" alt="Camiseta oficial del Club Almagro" />
+          <p>Camiseta Oficial - $10.000</p>
+        </li>
+        <li class="producto" tabindex="0">
+          <img src="short.jpg" alt="Short deportivo del Club Almagro" />
+          <p>Short Deportivo - $6.500</p>
+        </li>
+        <li class="producto" tabindex="0">
+          <img src="botella.jpg" alt="Botella personalizada Club Almagro" />
+          <p>Botella Personalizada - $3.000</p>
+        </li>
+      </ul>
+      <div class="container" style="text-align:center;">
+        <a href="tienda.html" class="btn" role="button" aria-label="Ver tienda completa">Ver tienda completa</a>
+      </div>
+    </section>
+
+    <!-- Novedades -->
+    <section class="blog" aria-label="Novedades del club">
+      <h2>Novedades</h2>
+      <div class="novedades container">
+        <article class="novedad" tabindex="0">
+          <h3>Nuevo Torneo de Invierno</h3>
+          <p>¡Inscripciones abiertas para todas las categorías!</p>
+        </article>
+        <article class="novedad" tabindex="0">
+          <h3>Se inaugura el nuevo gimnasio</h3>
+          <p>Equipamiento de última generación para socios y socias.</p>
+        </article>
+      </div>
+      <div class="container" style="text-align:center; margin-top: 1rem;">
+        <a href="publicaciones.html" class="btn" role="button" aria-label="Ver todas las novedades">Ver todas las novedades</a>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="contacto container" id="contacto" aria-label="Contacto y redes sociales">
+      <h2>Contacto</h2>
+      <address>
+        <p>Dirección: Medrano 522, CABA</p>
+        <p>Teléfono: <a href="tel:+541112345678">(011) 1234-5678</a></p>
+        <p>Redes: 
+          <a href="https://www.instagram.com/clubalmagro1911/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Club Almagro">Instagram</a> | 
+          <a href="https://www.facebook.com/ClubAlmagro1911" target="_blank" rel="noopener noreferrer" aria-label="Facebook Club Almagro">Facebook</a>
+        </p>
+      </address>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Club Almagro. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>

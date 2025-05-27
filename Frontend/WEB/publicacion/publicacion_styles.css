@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9f9f9;
+  color: #333;
+}
+
+.publicacion-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.publicacion h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #003366;
+}
+
+.publicacion .meta {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 1.5rem;
+}
+
+.publicacion img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.publicacion .contenido {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  white-space: pre-line;
+}

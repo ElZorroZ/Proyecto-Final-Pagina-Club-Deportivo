@@ -1,0 +1,374 @@
+/* historia.css */
+
+/* Reset y base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #ffffff; /* blanco */
+  color: #000000; /* negro */
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Header */
+header {
+  background-color: #003366; /* azul oscuro */
+  color: white;
+  padding: 1rem 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.logo {
+  max-height: 50px;
+  vertical-align: middle;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: #0059b3; /* azul medio */
+  outline: none;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%; /* justo debajo */
+  left: 0;
+  background-color: #003366;
+  border-radius: 0 0 6px 6px;
+  min-width: 140px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  z-index: 10;
+}
+
+.dropdown-menu li {
+  padding: 0;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.5rem 1rem;
+  font-weight: 400;
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu {
+  display: block;
+}
+
+/* Botón login */
+.btn-login {
+  background-color: #000000; /* negro */
+  color: #ffffff !important;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  border: 2px solid white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-login:hover,
+.btn-login:focus {
+  background-color: #0059b3; /* azul medio */
+  color: white !important;
+  border-color: #0059b3;
+  outline: none;
+}
+
+.historia-container {
+  display: flex;
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  gap: 2rem;
+}
+
+/* Menú lateral */
+.sub-menu {
+  flex: 0 0 200px;
+  background: #003366;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.sub-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sub-menu li {
+  margin-bottom: 1rem;
+}
+
+.sub-menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  display: block;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.sub-menu a:hover,
+.sub-menu a.active {
+  background-color: #0059b3;
+}
+
+/* Secciones principales */
+.historia-content {
+  flex: 1;
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 0 15px rgba(0,0,0,0.05);
+}
+
+.historia-section {
+  margin-bottom: 3rem;
+}
+
+.historia-section h2 {
+  color: #003366;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #0059b3;
+  padding-bottom: 0.5rem;
+}
+
+.historia-section p {
+  line-height: 1.6;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+/* Imágenes dentro de las secciones */
+.historia-section img {
+  max-width: 100%;
+  border-radius: 6px;
+  margin-top: 1rem;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+.linea-tiempo {
+  padding: 3rem 1rem;
+  background-color: #f4f4f4;
+}
+
+.linea-tiempo h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #003366;
+}
+
+.timeline-horizontal {
+  display: flex;
+  overflow-x: auto;
+  gap: 2rem;
+  padding-bottom: 1rem;
+  scroll-snap-type: x mandatory;
+}
+
+.timeline-horizontal::-webkit-scrollbar {
+  height: 8px;
+}
+.timeline-horizontal::-webkit-scrollbar-thumb {
+  background-color: #003366;
+  border-radius: 4px;
+}
+
+.evento {
+  flex: 0 0 auto;
+  width: 250px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  text-align: center;
+  scroll-snap-align: start;
+}
+
+.evento img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+
+.evento h3 {
+  margin: 0.5rem 0 0.25rem;
+  color: #003366;
+}
+
+.evento p {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.modal.oculto {
+  display: none;
+}
+
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-contenido {
+  background: #fff;
+  padding: 2rem;
+  max-width: 600px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.cerrar {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.btn-ver-mas {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #003366;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 0.95rem;
+}
+
+.btn-ver-mas:hover {
+  background-color: #0055aa;
+  transform: scale(1.05);
+}
+
+.btn-ver-mas:active {
+  transform: scale(0.97);
+}
+
+/* Tabs */
+.historia-tabs {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+  gap: 1rem;
+}
+
+.historia-tabs button {
+  background-color: #003366; /* azul oscuro */
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.historia-tabs button:hover,
+.historia-tabs button:focus {
+  background-color: #0059b3; /* azul medio */
+  outline: none;
+  transform: translateY(-2px);
+}
+
+.historia-tabs button.active {
+  background-color: #0073e6; /* más claro para destacar */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+
+/* Oculto (para secciones y modal) */
+.oculto {
+  display: none;
+}
+
+/* Grilla de jugadores históricos */
+.grid-jugadores {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Estilo visual de cada jugador */
+.grid-jugadores .evento {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.grid-jugadores {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Fuerza 4 columnas */
+  gap: 2rem;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+/* Footer */
+footer {
+  background-color: #001f3f;
+  color: #ffffff;
+  text-align: center;
+  padding: 1.5rem 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-top: 2rem;
+}

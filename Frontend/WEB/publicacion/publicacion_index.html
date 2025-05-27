@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Novedades</title>
+  <link rel="stylesheet" href="publicacion_index_styles.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container header">
+      <a href="/index.html" aria-label="Página principal Club Almagro">
+        <img src="/img/logo.png" alt="Logo del Club Almagro" class="logo" />
+      </a>
+      <nav aria-label="Menú principal">
+        <ul>
+            <li><a href="/index.html">Inicio</a></li>
+            <li><a href="publicacion_index.html">Novedades</a></li>
+            <li><a href="fixture.html">Historia</a></li>
+            <li class="dropdown">
+                <a href="#">Plantel</a>
+                <ul class="dropdown-menu">
+                <li><a href="#">Ejemplo 1</a></li>
+                <li><a href="#">Ejemplo 2</a></li>
+                <li><a href="#">Ejemplo 3</a></li>
+                </ul>
+            </li>
+            <li><a href="fixture.html">Fixture</a></li>
+            <li><a href="actividades.html">Actividades</a></li>
+            <li><a href="tienda.html">Tienda</a></li>
+            <li><a class="btn-login" href="login.html">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <h1>Novedades</h1>
+  <div id="publicacionesGrid" class="grid"></div>
+  <div class="pagination" id="pagination"></div>
+
+  <footer>
+    <p>© 2025 Club Deportivo. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="publicacion_index.js"></script>
+</body>
+</html>

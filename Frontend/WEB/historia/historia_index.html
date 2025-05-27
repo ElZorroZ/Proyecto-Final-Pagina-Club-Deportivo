@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Historia del Club</title>
+  <link rel="stylesheet" href="historia_index_styles.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container header">
+      <a href="/index.html" aria-label="Página principal Club Almagro">
+        <img src="/img/logo.png" alt="Logo del Club Almagro" class="logo" />
+      </a>
+      <nav aria-label="Menú principal">
+        <ul>
+            <li><a href="/index.html">Inicio</a></li>
+            <li><a href="publicacion_index.html">Novedades</a></li>
+            <li><a href="fixture.html">Historia</a></li>
+            <li class="dropdown">
+                <a href="#">Plantel</a>
+                <ul class="dropdown-menu">
+                <li><a href="#">Ejemplo 1</a></li>
+                <li><a href="#">Ejemplo 2</a></li>
+                <li><a href="#">Ejemplo 3</a></li>
+                </ul>
+            </li>
+            <li><a href="fixture.html">Fixture</a></li>
+            <li><a href="actividades.html">Actividades</a></li>
+            <li><a href="tienda.html">Tienda</a></li>
+            <li><a class="btn-login" href="login.html">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="historia-main container">
+
+    <!-- Pestañas / Tabs -->
+    <div class="historia-tabs">
+      <button id="tab-crono" class="active">Cronología</button>
+      <button id="tab-jugadores">Jugadores Históricos</button>
+    </div>
+
+    <!-- Sección Cronología -->
+    <section id="seccion-crono" class="linea-tiempo">
+      <h2>Línea de Tiempo</h2>
+      <div class="timeline-horizontal">
+        <!-- tus eventos -->
+        <div class="evento">
+          <img src="/img/ejemplo-1.jpeg" alt="Fundación del club en 1948" />
+          <h3>1948</h3>
+          <p>Fundación del club por un grupo de vecinos apasionados.</p>
+          <button class="btn-ver-mas" onclick="mostrarDetalle('1948')">Ver más</button>
+        </div>
+
+        <!-- resto de eventos… -->
+      </div>
+      <!-- modal igual que antes -->
+      <div id="modal-detalle" class="modal oculto">
+        <div class="modal-contenido">
+          <span class="cerrar" onclick="cerrarModal()">&times;</span>
+          <div id="contenido-detalle"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Jugadores (inicialmente oculta) -->
+    <section id="seccion-jugadores" class="jugadores-historicos oculto">
+      <h2>Jugadores Históricos</h2>
+      <div class="grid-jugadores">
+        <div class="evento">
+          <img src="/img/ejemplo-1.jpeg" alt="Juan Pérez, delantero 1970–1980">
+          <h3>Juan Pérez</h3>
+          <p>Delantero estrella entre 1970 y 1980. Máximo goleador del club.</p>
+          <button class="btn-ver-mas" onclick="mostrarDetalle('1948')">Ver más</button>
+        </div>
+        <div class="evento">
+          <img src="/img/ejemplo-1.jpeg" alt="Carlos Gómez, capitán de los 90">
+          <h3>Carlos Gómez</h3>
+          <p>Capitán y referente en los años 90. Líder dentro y fuera del campo.</p>
+          <button class="btn-ver-mas" onclick="mostrarDetalle('1948')">Ver más</button>
+        </div>
+        <!-- Más jugadores -->
+      </div>
+    </section>
+
+
+  </main>
+
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Club Deportivo - Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <script src="historia_index.js"></script>
+</body>
+</html>
