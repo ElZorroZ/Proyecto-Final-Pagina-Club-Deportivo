@@ -1,0 +1,272 @@
+/* Reset y base */
+html, body {
+  height: 100%;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #ffffff;
+  color: #000;
+  line-height: 1.6;
+  font-size: 16px;
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+}
+.container {
+  flex: 1;
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #003366;
+  color: white;
+  padding: 1rem 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  z-index: 999;
+}
+.logo {
+  max-height: 50px;
+  vertical-align: middle;
+}
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+nav a:hover,
+nav a:focus {
+  background-color: #0059b3;
+  outline: none;
+}
+.dropdown {
+  position: relative;
+}
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #003366;
+  border-radius: 0 0 6px 6px;
+  min-width: 140px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  z-index: 10;
+}
+.dropdown-menu li {
+  padding: 0;
+}
+.dropdown-menu a {
+  display: block;
+  padding: 0.5rem 1rem;
+  font-weight: 400;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu {
+  display: block;
+}
+/* Botón login */
+.btn-login {
+  background-color: #000;
+  color: #fff !important;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  border: 2px solid white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.btn-login:hover,
+.btn-login:focus {
+  background-color: #0059b3;
+  color: white !important;
+  border-color: #0059b3;
+  outline: none;
+}
+/* Footer */
+.footer {
+  background-color: #003366;
+  color: white;
+  padding: 1.5rem 0;
+  text-align: center;
+}
+.footer .social {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.footer .social img {
+  width: 24px;
+  height: 24px;
+}
+.footer .social a {
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+.footer .social a:hover,
+.footer .social a:focus {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+  outline: none;
+}
+
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+#timeline {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
+
+.timeline-card {
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 1rem;
+  min-width: 240px;
+  flex-shrink: 0;
+}
+
+.timeline-card input,
+.timeline-card textarea {
+  width: 100%;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button.add {
+  background-color: #2563eb;
+  color: white;
+}
+
+button.add:hover {
+  background-color: #1e40af;
+}
+
+button.delete {
+  background: transparent;
+  color: #e11d48;
+  font-size: 0.9rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+th, td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+input[type="text"], input[type="number"] {
+  width: 100%;
+  padding: 0.4rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="file"] {
+  width: 100%;
+}
+
+.actions button {
+  margin-right: 0.5rem;
+  background: none;
+  color: #2563eb;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.actions button:hover {
+  color: #1e3a8a;
+}
+/* Input Año */
+input.year-input {
+  width: 100%;
+  padding: 6px 8px;
+  margin-bottom: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* Textarea Descripción */
+textarea.description-input {
+  width: 100%;
+  padding: 6px 8px;
+  margin-bottom: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  resize: vertical;
+  min-height: 60px;
+  box-sizing: border-box;
+}
+
+/* Input Archivo */
+input.file-input {
+  width: 100%;
+  margin-bottom: 8px;
+  font-size: 14px;
+  box-sizing: border-box;
+}

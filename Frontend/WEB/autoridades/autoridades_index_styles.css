@@ -30,6 +30,19 @@ main {
 /* Header */
 header {
   background-color: #003366; /* azul oscuro */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: #003366; /* azul oscuro */
+  color: white;
+  padding: 1rem 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   color: white;
   padding: 1rem 0;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
@@ -170,6 +183,7 @@ header p {
 }
 
 .contenedor {
+  margin-top: 100px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -203,13 +217,55 @@ header p {
   color: #555;
   font-style: italic;
 }
-/* Footer */
-footer {
-  background-color: #001f3f;
+
+/* Contacto */
+.contacto {
+  background-color: #000000;
   color: #ffffff;
+  padding: 3rem 0;
   text-align: center;
+  border-radius: 10px;
+}
+
+.contacto p,
+.contacto a {
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.contacto a:hover,
+.contacto a:focus {
+  text-decoration: underline;
+  outline: none;
+}
+/* Footer */
+.footer {
+  background-color: #003366;
+  color: white;
   padding: 1.5rem 0;
-  font-size: 0.9rem;
-  font-weight: 500;
-  margin-top: 2rem;
+  text-align: center;
+}
+
+.footer .social {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.footer .social img {
+  width: 24px;
+  height: 24px;
+}
+.footer .social a {
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.footer .social a:hover,
+.footer .social a:focus {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+  outline: none;
 }

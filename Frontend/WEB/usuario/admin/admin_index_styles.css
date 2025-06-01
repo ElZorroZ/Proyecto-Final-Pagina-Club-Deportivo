@@ -1,4 +1,4 @@
-/* Reset y base */
+/* css/admin.css */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,12 +6,16 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* 100% viewport height */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #ffffff; /* blanco */
-  color: #000000; /* negro */
+  background: #ffffff;
+  color: #000000;
   line-height: 1.6;
   font-size: 16px;
   padding-top: 80px;
+  margin: 0; /* eliminar márgenes por defecto */
 }
 
 .container {
@@ -27,7 +31,7 @@ header {
   left: 0;
   width: 100%;
   z-index: 999;
-  background-color: #003366; /* azul oscuro */
+  background-color: #003366;
   color: white;
   padding: 1rem 0;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
@@ -62,7 +66,7 @@ nav a {
 
 nav a:hover,
 nav a:focus {
-  background-color: #0059b3; /* azul medio */
+  background-color: #0059b3;
   outline: none;
 }
 
@@ -73,7 +77,7 @@ nav a:focus {
 .dropdown-menu {
   display: none;
   position: absolute;
-  top: 100%; /* justo debajo */
+  top: 100%;
   left: 0;
   background-color: #003366;
   border-radius: 0 0 6px 6px;
@@ -90,10 +94,10 @@ nav a:focus {
   display: block;
   padding: 0.5rem 1rem;
   font-weight: 400;
-  white-space: nowrap;      /* evita el salto de línea */
-  overflow: hidden;         /* oculta el contenido que desborda */
-  text-overflow: ellipsis;  /* muestra "..." si el texto es muy largo */
-  max-width: 100%;          /* se asegura de no exceder el ancho del menú */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
 }
 
 .dropdown:hover .dropdown-menu,
@@ -103,7 +107,7 @@ nav a:focus {
 
 /* Botón login */
 .btn-login {
-  background-color: #000000; /* negro */
+  background-color: #000000;
   color: #ffffff !important;
   font-weight: 700;
   padding: 0.5rem 1rem;
@@ -113,41 +117,10 @@ nav a:focus {
 
 .btn-login:hover,
 .btn-login:focus {
-  background-color: #0059b3; /* azul medio */
+  background-color: #0059b3;
   color: white !important;
   border-color: #0059b3;
   outline: none;
-}
-
-.publicacion-container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
-}
-
-.publicacion h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-  color: #003366;
-}
-
-.publicacion .meta {
-  font-size: 0.9rem;
-  color: #777;
-  margin-bottom: 1.5rem;
-}
-
-.publicacion img {
-  max-width: 100%;
-  border-radius: 10px;
-  margin: 1.5rem 0;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-.publicacion .contenido {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  white-space: pre-line;
 }
 /* Footer */
 .footer {
@@ -177,5 +150,49 @@ nav a:focus {
 .footer .social a:focus {
   transform: scale(1.1);
   filter: brightness(1.2);
+  outline: none;
+}
+main {
+  flex: 1;
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+h1 {
+  color: #003366;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.admin-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+  align-items: stretch; /* Hace que todos los botones tengan la misma altura */
+}
+
+.admin-menu a {
+  flex: 1 1 180px;
+  min-height: 80px; /* Altura mínima para uniformidad */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  word-break: break-word;
+  background-color: #003366;
+  color: white;
+  border-radius: 6px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
+}
+
+.admin-menu a:hover,
+.admin-menu a:focus {
+  background-color: #0059b3;
   outline: none;
 }

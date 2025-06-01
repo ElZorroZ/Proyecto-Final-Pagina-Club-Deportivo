@@ -13,6 +13,7 @@ body {
   color: #000000; /* negro */
   line-height: 1.6;
   font-size: 16px;
+  padding-top: 80px;
 }
 
 .container {
@@ -23,6 +24,11 @@ body {
 
 /* Header */
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
   background-color: #003366; /* azul oscuro */
   color: white;
   padding: 1rem 0;
@@ -86,6 +92,10 @@ nav a:focus {
   display: block;
   padding: 0.5rem 1rem;
   font-weight: 400;
+  white-space: nowrap;      /* evita el salto de línea */
+  overflow: hidden;         /* oculta el contenido que desborda */
+  text-overflow: ellipsis;  /* muestra "..." si el texto es muy largo */
+  max-width: 100%;          /* se asegura de no exceder el ancho del menú */
 }
 
 .dropdown:hover .dropdown-menu,
@@ -368,14 +378,34 @@ section {
 }
 
 /* Footer */
-footer {
-  background-color: #001f3f;
-  color: #ffffff;
-  text-align: center;
+.footer {
+  background-color: #003366;
+  color: white;
   padding: 1.5rem 0;
-  font-size: 0.9rem;
-  font-weight: 500;
-  margin-top: 2rem;
+  text-align: center;
+}
+
+.footer .social {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.footer .social img {
+  width: 24px;
+  height: 24px;
+}
+.footer .social a {
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.footer .social a:hover,
+.footer .social a:focus {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+  outline: none;
 }
 
 /* Botones genéricos */
@@ -397,28 +427,286 @@ footer {
   background-color: #0059b3;
   outline: none;
 }
-
-/* Responsive */
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    gap: 0.75rem;
+.menu-btn {
+  display: none; /* si querés usar botón hamburguesa después, lo activamos */
+}
+/* =========================
+   1. BREAKPOINT: ≤1024px (Tablets y pantallas medianas)
+   ========================= */
+@media (max-width: 1024px) {
+  /* Header */
+  header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap; /* evitar salto de línea */
+  }
+   nav {
+    flex-grow: 1; /* que ocupe el resto del espacio */
+    margin-left: 1rem;
   }
 
-  .cards,
-  .productos,
+  nav ul {
+    display: flex;
+    flex-wrap: nowrap; /* que no se vaya a otra línea */
+    justify-content: flex-end;
+    gap: 1.5rem;
+  }
+
+  .logo {
+    max-height: 50px;
+    flex-shrink: 0;
+  }
+  nav ul li {
+    white-space: nowrap; /* que no rompa texto */
+  }
+
+  .menu-btn {
+    display: none; /* si querés usar botón hamburguesa después, lo activamos */
+  }
+
+  /* Hero */
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  .hero p {
+    font-size: 1.1rem;
+  }
+  .hero-img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Actividades */
+  .cards {
+    gap: 1.5rem;
+    justify-content: center;
+  }
+  .card {
+    width: 140px;
+    height: 100px;
+    font-size: 1.1rem;
+  }
+
+  /* Productos */
+  .productos .producto {
+    width: 150px;
+  }
+  .producto img {
+    margin-bottom: 0.75rem;
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Novedades */
+  .novedades .novedad {
+    width: 220px;
+  }
+
+  /* Tabla Fixtures */
+  .fixtures th,
+  .fixtures td {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  /* Footer */
+  .footer .social img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+
+/* =========================
+   2. BREAKPOINT: ≤768px (Tablets pequeñas y móviles grandes)
+   ========================= */
+@media (max-width: 768px) {
+  header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding: 0 1rem;
+  }
+
+  .logo {
+    max-height: 45px;
+    flex-shrink: 0;
+  }
+
+  nav {
+    position: relative;
+    flex-grow: 1;
+    margin-left: 1rem;
+  }
+
+  nav ul {
+    display: none; /* ocultamos menú normal */
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white; /* o el color de fondo del header */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    border-radius: 4px;
+    width: 180px;
+    padding: 1rem 0;
+    z-index: 1000;
+  }
+
+  nav ul.active {
+    display: flex; /* menú visible cuando está activo */
+  }
+
+  nav ul li {
+    padding: 0.75rem 1rem;
+    white-space: nowrap;
+    border-bottom: 1px solid #eee;
+  }
+
+  nav ul li:last-child {
+    border-bottom: none;
+  }
+
+  /* Botón hamburguesa */
+  .menu-btn {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    position: relative;
+  }
+
+  /* Líneas del botón hamburguesa */
+  .menu-btn span,
+  .menu-btn span::before,
+  .menu-btn span::after {
+    display: block;
+    background-color: #333;
+    height: 3px;
+    width: 100%;
+    border-radius: 2px;
+    position: absolute;
+    transition: all 0.3s ease;
+  }
+
+  .menu-btn span {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .menu-btn span::before {
+    content: '';
+    top: -8px;
+  }
+
+  .menu-btn span::after {
+    content: '';
+    top: 8px;
+  }
+
+  /* (Opcional) Animación cuando está activo */
+  .menu-btn.active span {
+    background-color: transparent;
+  }
+  .menu-btn.active span::before {
+    transform: rotate(45deg);
+    top: 0;
+  }
+  .menu-btn.active span::after {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+}
+
+
+/* =========================
+   3. BREAKPOINT: ≤480px (Móviles)
+   ========================= */
+@media (max-width: 480px) {
+  /* ===== Header ===== */
+  header {
+    padding: 0.5rem 0;
+  }
+  .logo {
+    max-height: 35px;
+  }
+  /* Nav: cada ítem ocupa toda la anchura */
+  nav ul li {
+    width: 100%;
+  }
+  nav a {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+  /* Hero: fuente y botones más compactos */
+  .hero h1 {
+    font-size: 1.75rem;
+  }
+  .hero p {
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+  }
+  .hero .btn {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  /* Actividades: una columna */
+  .cards {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .card {
+    width: 100%;
+    height: 90px;
+    font-size: 1rem;
+  }
+
+  /* Tabla: mantener scroll */
+  .fixtures table {
+    min-width: 480px;
+  }
+
+  /* Productos: una columna */
+  .productos {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .productos .producto {
+    width: 100%;
+    padding: 0.75rem;
+  }
+  .producto p {
+    font-size: 0.9rem;
+  }
+
+  /* Novedades: una columna */
   .novedades {
     flex-direction: column;
-    align-items: center;
+    gap: 1rem;
+  }
+  .novedades .novedad {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
   }
 
-  .card,
-  .producto,
-  .novedad {
-    width: 90%;
+  /* Contacto: texto más pequeño */
+  .contacto p,
+  .contacto a {
+    font-size: 0.9rem;
   }
 
-  .fixtures table {
+  /* Footer: iconos más pequeños y centrados */
+  .footer .social img {
+    width: 18px;
+    height: 18px;
+  }
+  .footer p {
     font-size: 0.9rem;
   }
 }

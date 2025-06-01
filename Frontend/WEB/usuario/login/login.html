@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iniciar Sesión - Club Deportivo</title>
+  <link rel="stylesheet" href="login_styles.css" />
+</head>
+<body>
+  <div class="login-container">
+    <h2>Iniciar Sesión</h2>
+    <form id="loginForm">
+      <label for="username">Usuario</label>
+      <input type="text" id="username" name="username" required />
+
+      <label for="password">Contraseña</label>
+      <input type="password" id="password" name="password" required />
+
+      <button type="submit">Ingresar</button>
+    </form>
+    <p id="error-message"></p>
+
+    <div class="register-link">
+      <p>¿No sos socio aún? <a href="/WEB/usuario/register/register.html">Registrate acá</a></p>
+    </div>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>
+

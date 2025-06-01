@@ -1,5 +1,4 @@
 /* estatuto.css */
-
 /* Reset y base */
 * {
   box-sizing: border-box;
@@ -13,6 +12,7 @@ body {
   color: #000000; /* negro */
   line-height: 1.6;
   font-size: 16px;
+  padding-top: 80px;
 }
 
 .container {
@@ -23,6 +23,15 @@ body {
 
 /* Header */
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
   background-color: #003366; /* azul oscuro */
   color: white;
   padding: 1rem 0;
@@ -86,6 +95,10 @@ nav a:focus {
   display: block;
   padding: 0.5rem 1rem;
   font-weight: 400;
+  white-space: nowrap;      /* evita el salto de línea */
+  overflow: hidden;         /* oculta el contenido que desborda */
+  text-overflow: ellipsis;  /* muestra "..." si el texto es muy largo */
+  max-width: 100%;          /* se asegura de no exceder el ancho del menú */
 }
 
 .dropdown:hover .dropdown-menu,
@@ -277,14 +290,54 @@ main.estatuto {
 .articulo ul li {
   margin-bottom: 6px;
 }
-
-/* Footer */
-footer {
-  background-color: #001f3f;
+/* Contacto */
+.contacto {
+  background-color: #000000;
   color: #ffffff;
+  padding: 3rem 0;
   text-align: center;
+  border-radius: 10px;
+}
+
+.contacto p,
+.contacto a {
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.contacto a:hover,
+.contacto a:focus {
+  text-decoration: underline;
+  outline: none;
+}
+/* Footer */
+.footer {
+  background-color: #003366;
+  color: white;
   padding: 1.5rem 0;
-  font-size: 0.9rem;
-  font-weight: 500;
-  margin-top: 2rem;
+  text-align: center;
+}
+
+.footer .social {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.footer .social img {
+  width: 24px;
+  height: 24px;
+}
+.footer .social a {
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.footer .social a:hover,
+.footer .social a:focus {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+  outline: none;
 }

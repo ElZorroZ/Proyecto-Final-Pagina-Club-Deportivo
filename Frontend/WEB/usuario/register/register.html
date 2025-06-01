@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registro - Club Deportivo</title>
+  <link rel="stylesheet" href="register_styles.css" />
+</head>
+<body>
+  <div class="register-container">
+    <h2>Registro de Socio</h2>
+    <form id="registerForm">
+      <label for="username">Usuario</label>
+      <input type="text" id="username" name="username" required />
+
+      <label for="email">Correo electrónico</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="password">Contraseña</label>
+      <input type="password" id="password" name="password" required />
+
+      <label for="confirmPassword">Confirmar contraseña</label>
+      <input type="password" id="confirmPassword" name="confirmPassword" required />
+
+      <button type="submit">Registrarse</button>
+    </form>
+    <p id="register-error-message"></p>
+
+    <div class="login-link">
+      <p>¿Ya tenés una cuenta? <a href="/WEB/usuario/login/login.html">Iniciá sesión acá</a></p>
+    </div>
+  </div>
+
+  <script src="registro.js"></script>
+</body>
+</html>

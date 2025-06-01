@@ -13,6 +13,7 @@
       <a href="index.html" aria-label="Página principal Club Almagro">
         <img src="img/logo.png" alt="Logo del Club Almagro" class="logo" />
       </a>
+      <button class="menu-btn" aria-label="Mostrar menú">&#9776;</button>
       <nav aria-label="Menú principal">
         <ul>
           <li><a href="index.html">Inicio</a></li>
@@ -26,17 +27,24 @@
             </ul>
           </li>
           <li class="dropdown">
-            <a href="#">Plantel</a>
+            <a href="#">Fútbol</a>
             <ul class="dropdown-menu">
-              <li><a href="#">Ejemplo 1</a></li>
+              <li><a href="WEB/actividad/futbol_profesional/futbol_profesional_index.html">Fútbol Profesional</a></li>
               <li><a href="#">Ejemplo 2</a></li>
               <li><a href="#">Ejemplo 3</a></li>
             </ul>
           </li>
-          <li><a href="fixture.html">Fixture</a></li>
-          <li><a href="actividades.html">Actividades</a></li>
-          <li><a href="tienda.html">Tienda</a></li>
-          <li><a class="btn-login" href="login.html">Login</a></li>
+          <li class="dropdown">
+            <a href="#">Actividades</a>
+            <ul class="dropdown-menu">
+              <li><a href="WEB/actividad/basquet/basquet_index.html">Básquet</a></li>
+              <li><a href="#">Ejemplo 2</a></li>
+              <li><a href="#">Ejemplo 3</a></li>
+            </ul>
+          </li>
+          <li><a href="WEB/tienda/tienda_index.html">Tienda</a></li>
+          <li><a href="WEB/usuario/admin/admin_index.html">Panel de administración	</a></li>
+          <li><a class="btn-login" href="WEB/usuario/login/login.html">Login</a></li>
         </ul>
       </nav>
     </div>
@@ -118,7 +126,7 @@
         </li>
       </ul>
       <div class="container" style="text-align:center;">
-        <a href="tienda.html" class="btn" role="button" aria-label="Ver tienda completa">Ver tienda completa</a>
+        <a href="WEB/tienda/tienda_index.html" class="btn" role="button" aria-label="Ver tienda completa">Ver tienda completa</a>
       </div>
     </section>
 
@@ -136,7 +144,7 @@
         </article>
       </div>
       <div class="container" style="text-align:center; margin-top: 1rem;">
-        <a href="publicaciones.html" class="btn" role="button" aria-label="Ver todas las novedades">Ver todas las novedades</a>
+        <a href="WEB/publicacion/publicacion_index.html" class="btn" role="button" aria-label="Ver todas las novedades">Ver todas las novedades</a>
       </div>
     </section>
 
@@ -155,10 +163,16 @@
   </main>
 
   <!-- Footer -->
-  <footer>
+  <footer class="footer">
     <div class="container">
       <p>&copy; 2025 Club Almagro. Todos los derechos reservados.</p>
+      <nav class="social">
+        <a href="#" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><img src="img/facebook.svg" alt="Facebook" title="Facebook" /></a>
+        <a href="#" aria-label="Twitter" target="_blank" rel="noopener noreferrer"><img src="img/X.svg" alt="Twitter" title="Twitter" /></a>
+        <a href="#" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><img src="img/instagram.svg" alt="Instagram" title="Instagram" /></a>
+      </nav>
     </div>
   </footer>
+  <script src="index.js"></script>
 </body>
 </html>

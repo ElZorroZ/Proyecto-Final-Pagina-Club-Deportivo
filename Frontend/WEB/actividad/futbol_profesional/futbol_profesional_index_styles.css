@@ -1,4 +1,5 @@
 /* Reset y base */
+/* Reset y base */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -119,36 +120,75 @@ nav a:focus {
   outline: none;
 }
 
-.publicacion-container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
+/* Hero */
+.hero {
+  background: url('../img/hero_futbol.jpg') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 120px 0;
 }
-
-.publicacion h1 {
-  font-size: 2.5rem;
+.hero h1 {
+  font-size: 3rem;
   margin-bottom: 0.5rem;
-  color: #003366;
+}
+.hero p {
+  font-size: 1.25rem;
+}
+/* Plantel */
+
+.roster-link {
+  padding: 4rem 0;
+  text-align: center;
 }
 
-.publicacion .meta {
-  font-size: 0.9rem;
-  color: #777;
-  margin-bottom: 1.5rem;
+.see-more-container {
+  margin-top: 2rem;
 }
 
-.publicacion img {
-  max-width: 100%;
-  border-radius: 10px;
-  margin: 1.5rem 0;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-.publicacion .contenido {
+.btn-see-more {
+  display: inline-block;
+  background-color: #003366;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
   font-size: 1.1rem;
-  line-height: 1.7;
-  white-space: pre-line;
 }
+
+.btn-see-more:hover,
+.btn-see-more:focus {
+  background-color: #0059b3;
+}
+
+
+/* Noticias */
+.news {
+  margin: 3rem 0;
+}
+.news-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+.news-item {
+  background: #f7f7f7;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.news-item img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+.news-item h3 {
+  padding: 0.5rem 1rem;
+}
+.news-item p {
+  padding: 0 1rem 1rem;
+}
+
 /* Footer */
 .footer {
   background-color: #003366;
@@ -156,26 +196,13 @@ nav a:focus {
   padding: 1.5rem 0;
   text-align: center;
 }
-
 .footer .social {
   margin-top: 0.5rem;
   display: flex;
   justify-content: center;
   gap: 1rem;
 }
-
 .footer .social img {
   width: 24px;
   height: 24px;
-}
-.footer .social a {
-  cursor: pointer;
-  transition: transform 0.2s ease, filter 0.2s ease;
-}
-
-.footer .social a:hover,
-.footer .social a:focus {
-  transform: scale(1.1);
-  filter: brightness(1.2);
-  outline: none;
 }

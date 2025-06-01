@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Autoridades del Club</title>
-  <link rel="stylesheet" href="autoridades_index_styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Panel de Administración - Club Almagro</title>
+  <link rel="stylesheet" href="admin_index_styles.css" />
 </head>
 <body>
-  <header>
+  <!-- Header -->
+   <header>
     <div class="container header">
       <a href="/index.html" aria-label="Página principal Club Almagro">
         <img src="/img/logo.png" alt="Logo del Club Almagro" class="logo" />
@@ -47,23 +49,22 @@
     </div>
   </header>
 
-  <main class="contenedor">
-    <div class="tarjeta">
-      <img src="/img/ejemplo-1.jpeg" alt="Foto de Juan Pérez">
-      <h2>Juan Pérez</h2>
-      <p class="cargo">Presidente</p>
-    </div>
-    <div class="tarjeta">
-      <img src="/img/ejemplo-1.jpeg" alt="Foto de Ana López">
-      <h2>Ana López</h2>
-      <p class="cargo">Vicepresidenta</p>
-    </div>
-    <div class="tarjeta">
-      <img src="/img/ejemplo-1.jpeg" alt="Foto de Carlos Gómez">
-      <h2>Carlos Gómez</h2>
-      <p class="cargo">Secretario</p>
-    </div>
+  <main class="container">
+    <h1>Panel de Administración</h1>
+    <nav class="admin-menu" aria-label="Menú de administración">
+        <a href="/WEB/usuario/admin/CRUD/categoriaPublicacion/categoriaPublicacion.html" aria-label="Administrar categoria de publicaciones">Categoria de Publicaciones</a>
+      <a href="/WEB/usuario/admin/CRUD/categoriaPublicacion/publicaciones/publicacion.html" aria-label="Administrar publicaciones">Publicaciones</a>
+      <a href="estatuto_crud.html" aria-label="Administrar estatuto">Estatuto</a>
+      <a href="autoridades_crud.html" aria-label="Administrar autoridades">Autoridades</a>
+      <a href="publicacion_crud.html" aria-label="Administrar de actividades">Categoria de Actividades</a>
+      <a href="actividad_crud.html" aria-label="Administrar actividades">Actividades</a>
+      <a href="publicacion_crud.html" aria-label="Administrar categoria de fixtures">Categoria de Fixtures</a>
+      <a href="actividad_crud.html" aria-label="Administrar fixtures">Fixtures</a>
+    <a href="historia_crud.html" aria-label="Administrar historia">Historia</a>
+      <a href="tienda_crud.html" aria-label="Administrar tienda">Tienda</a>
+    </nav>
   </main>
+
   <!-- Footer -->
   <footer class="footer">
     <div class="container">

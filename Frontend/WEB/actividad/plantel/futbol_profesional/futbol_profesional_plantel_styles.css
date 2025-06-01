@@ -1,4 +1,5 @@
 /* Reset y base */
+/* Reset y base */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -118,37 +119,44 @@ nav a:focus {
   border-color: #0059b3;
   outline: none;
 }
+.plantel-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem 0;
+    }
 
-.publicacion-container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
-}
+    .jugador {
+      text-align: center;
+      max-width: 150px;
+    }
 
-.publicacion h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-  color: #003366;
-}
+    .jugador img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #0077cc;
+    }
 
-.publicacion .meta {
-  font-size: 0.9rem;
-  color: #777;
-  margin-bottom: 1.5rem;
-}
+    .jugador h3 {
+      margin: 0.5rem 0 0.2rem;
+      font-size: 1.1rem;
+    }
 
-.publicacion img {
-  max-width: 100%;
-  border-radius: 10px;
-  margin: 1.5rem 0;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
+    .jugador p {
+      margin: 0;
+      color: #666;
+      font-size: 0.95rem;
+    }
 
-.publicacion .contenido {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  white-space: pre-line;
-}
+    .hero {
+      background-color: #0077cc;
+      color: white;
+      padding: 2rem 0;
+      text-align: center;
+    }
 /* Footer */
 .footer {
   background-color: #003366;

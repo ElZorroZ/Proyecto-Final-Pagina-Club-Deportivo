@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Autoridades del Club</title>
-  <link rel="stylesheet" href="autoridades_index_styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Básquet - Club Deportivo</title>
+  <link rel="stylesheet" href="basquet_index_styles.css" />
 </head>
 <body>
   <header>
@@ -47,23 +48,43 @@
     </div>
   </header>
 
-  <main class="contenedor">
-    <div class="tarjeta">
-      <img src="/img/ejemplo-1.jpeg" alt="Foto de Juan Pérez">
-      <h2>Juan Pérez</h2>
-      <p class="cargo">Presidente</p>
+  <!-- Sección Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>Básquet</h1>
+      <p>Sumate a nuestra actividad de básquet para todas las edades. Entrenamientos, competencias y mucho más.</p>
     </div>
-    <div class="tarjeta">
-      <img src="/img/ejemplo-1.jpeg" alt="Foto de Ana López">
-      <h2>Ana López</h2>
-      <p class="cargo">Vicepresidenta</p>
+  </section>
+
+  <!-- Noticias recientes -->
+  <section class="news container">
+    <h2>Últimas Novedades</h2>
+    <div class="news-list">
+      <article class="news-item">
+        <img src="img/noticias/basquet1.jpg" alt="Noticia Básquet 1" />
+        <h3><a href="#">Gran victoria del equipo juvenil</a></h3>
+        <p>El equipo sub-17 ganó su partido contra el Club Vecinal con un resultado emocionante de 72-68.</p>
+      </article>
+      <article class="news-item">
+        <img src="img/noticias/basquet2.jpg" alt="Noticia Básquet 2" />
+        <h3><a href="#">Se abren nuevas inscripciones</a></h3>
+        <p>Ya podés anotarte para la temporada 2025. Cupos limitados por categoría.</p>
+      </article>
     </div>
-    <div class="tarjeta">
-      <img src="/img/ejemplo-1.jpeg" alt="Foto de Carlos Gómez">
-      <h2>Carlos Gómez</h2>
-      <p class="cargo">Secretario</p>
-    </div>
-  </main>
+  </section>
+
+  <!-- Información de la actividad -->
+  <section class="activity-info container">
+    <h2>Información de la Actividad</h2>
+    <ul>
+      <li><strong>Lugar:</strong> Polideportivo Club Almagro - Av. Siempreviva 123</li>
+      <li><strong>Cuota mensual:</strong> $8.000 (descuento para socios)</li>
+      <li><strong>Días disponibles:</strong> Lunes, Miércoles y Viernes</li>
+      <li><strong>Horarios:</strong> 18:00 a 21:00 hs</li>
+      <li><strong>Categorías:</strong> Infantil, Juvenil y Mayores</li>
+    </ul>
+  </section>
+
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
