@@ -49,19 +49,56 @@
     </div>
   </header>
 
-  <main class="container">
+ <main class="container">
     <h1>Panel de Administración</h1>
     <nav class="admin-menu" aria-label="Menú de administración">
-        <a href="/WEB/usuario/admin/CRUD/categoriaPublicacion/categoriaPublicacion.html" aria-label="Administrar categoria de publicaciones">Categoria de Publicaciones</a>
-      <a href="/WEB/usuario/admin/CRUD/categoriaPublicacion/publicaciones/publicacion.html" aria-label="Administrar publicaciones">Publicaciones</a>
-      <a href="estatuto_crud.html" aria-label="Administrar estatuto">Estatuto</a>
-      <a href="autoridades_crud.html" aria-label="Administrar autoridades">Autoridades</a>
-      <a href="publicacion_crud.html" aria-label="Administrar de actividades">Categoria de Actividades</a>
-      <a href="actividad_crud.html" aria-label="Administrar actividades">Actividades</a>
-      <a href="publicacion_crud.html" aria-label="Administrar categoria de fixtures">Categoria de Fixtures</a>
-      <a href="actividad_crud.html" aria-label="Administrar fixtures">Fixtures</a>
-    <a href="historia_crud.html" aria-label="Administrar historia">Historia</a>
-      <a href="tienda_crud.html" aria-label="Administrar tienda">Tienda</a>
+
+      <button class="category-btn" aria-expanded="false" aria-controls="publicaciones-submenu" id="publicaciones-btn">
+        Categoria de Publicaciones
+      </button>
+      <div class="submenu" id="publicaciones-submenu" role="region" aria-labelledby="publicaciones-btn">
+        <a href="/WEB/usuario/admin/CRUD/categoriaPublicacionCRUD/categoriaPublicacionCRUD.html" aria-label="Administrar categoria de publicaciones">Categorías</a>
+        <a href="/WEB/usuario/admin/CRUD/categoriaPublicacionCRUD/publicacionCRUD/publicacionCRUD.html" aria-label="Administrar publicaciones">Publicaciones</a>
+      </div>
+
+      <button class="category-btn" aria-expanded="false" aria-controls="actividades-submenu" id="actividades-btn">
+        Categoria de Actividades
+      </button>
+      <div class="submenu" id="actividades-submenu" role="region" aria-labelledby="actividades-btn">
+        <a href="/WEB/usuario/admin/CRUD/categoriaActividadCRUD/categoriaActividadCRUD.html" aria-label="Administrar categoria de actividades">Categorías</a>
+        <a href="/WEB/usuario/admin/CRUD/categoriaActividadCRUD/actividadCRUD/actividadCRUD.html" aria-label="Administrar actividades">Actividades</a>
+      </div>
+
+      <button class="category-btn" aria-expanded="false" aria-controls="fixtures-submenu" id="fixtures-btn">
+        Categoria de Fixtures
+      </button>
+      <div class="submenu" id="fixtures-submenu" role="region" aria-labelledby="fixtures-btn">
+        <a href="/WEB/usuario/admin/CRUD/categoriaFixtureCRUD/categoriaFixtureCRUD.html" aria-label="Administrar categoria de fixtures">Categorías</a>
+        <a href="/WEB/usuario/admin/CRUD/categoriaFixtureCRUD/fixtureCRUD/fixtureCRUD.html" aria-label="Administrar fixtures">Fixtures</a>
+      </div>
+
+      <button class="category-btn" aria-expanded="false" aria-controls="tienda-submenu" id="tienda-btn">
+        Tienda de productos
+      </button>
+      <div class="submenu" id="tienda-submenu" role="region" aria-labelledby="tienda-btn">
+        <a href="/WEB/usuario/admin/CRUD/categoriaProductoCRUD/categoriaProductoCRUD.html" aria-label="Administrar categoria de productos">Categorías</a>
+        <a href="/WEB/usuario/admin/CRUD/categoriaProductoCRUD/productoCRUD/productoCRUD.html" aria-label="Administrar productos">Productos</a>
+        <a href="/WEB/usuario/admin/CRUD/categoriaProductoCRUD/productoCRUD/descuentoCRUD/descuentoCRUD.html" aria-label="Administrar productos">Descuentos</a>
+        <a href="/WEB/usuario/admin/CRUD/categoriaProductoCRUD/productoCRUD/pedidoCRUD/pedidoCRUD.html" aria-label="Administrar seguimiento">Pedidos</a>  
+      </div>
+
+      <button class="category-btn" aria-expanded="false" aria-controls="plantel-submenu" id="plantel-btn">
+        Categoria de planteles
+      </button>
+      <div class="submenu" id="plantel-submenu" role="region" aria-labelledby="plantel-btn">
+        <a href="/WEB/usuario/admin/CRUD/categoriaPlantelCRUD/categoriaPlantelCRUD.html" aria-label="Administrar categoria de planteles">Categorías</a>
+        <a href="/WEB/usuario/admin/CRUD/categoriaPlantelCRUD/plantelCRUD/plantelCRUD.html" aria-label="Administrar planteles">Planteles</a>
+        <a href="/WEB/usuario/admin/CRUD/categoriaPlantelCRUD/plantelCRUD/jugadorCRUD/jugadorCRUD.html" aria-label="Administrar jugadores">Jugadores</a>
+      </div> 
+
+      <a href="/WEB/usuario/admin/CRUD/estatutoCRUD/estatutoCRUD.html" class="category-btn" aria-label="Administrar estatuto">Estatuto</a>
+      <a href="/WEB/usuario/admin/CRUD/autoridadCRUD/autoridadCRUD.html" class="category-btn" aria-label="Administrar autoridades">Autoridades</a>
+      <a href="/WEB/usuario/admin/CRUD/historiaCRUD/historiaCRUD.html" class="category-btn" aria-label="Administrar historia">Historia</a>
     </nav>
   </main>
 
@@ -76,5 +113,6 @@
       </nav>
     </div>
   </footer>
+  <script src="admin_index.js"></script>
 </body>
 </html>

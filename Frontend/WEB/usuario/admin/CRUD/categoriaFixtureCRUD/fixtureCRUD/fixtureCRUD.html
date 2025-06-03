@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CRUD de Fixtures</title>
+  <link rel="stylesheet" href="fixtureCRUD_styles.css" />
+</head>
+<body>
+  <header>
+    <div class="container header">
+      <a href="/index.html" aria-label="Página principal Club Almagro">
+        <img src="/img/logo.png" alt="Logo del Club Almagro" class="logo" />
+      </a>
+      <nav aria-label="Menú principal">
+        <ul>
+          <li><a href="/index.html">Inicio</a></li>
+          <li><a href="/WEB/publicacion/publicacion_index.html">Novedades</a></li>
+          <li class="dropdown">
+            <a href="#">Club</a>
+            <ul class="dropdown-menu">
+              <li><a href="/WEB/historia/historia_index.html">Historia</a></li>
+              <li><a href="/WEB/estatuto/estatuto_index.html">Estatuto</a></li>
+              <li><a href="/WEB/autoridades/autoridades_index.html">Autoridades</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#">Fútbol</a>
+            <ul class="dropdown-menu">
+              <li><a href="/WEB/actividad/futbol_profesional/futbol_profesional_index.html">Fútbol Profesional</a></li>
+              <li><a href="#">Ejemplo 2</a></li>
+              <li><a href="#">Ejemplo 3</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#">Actividades</a>
+            <ul class="dropdown-menu">
+              <li><a href="/WEB/actividad/basquet/basquet_index.html">Básquet</a></li>
+              <li><a href="#">Ejemplo 2</a></li>
+              <li><a href="#">Ejemplo 3</a></li>
+            </ul>
+          </li>
+          <li><a href="/WEB/tienda/tienda_index.html">Tienda</a></li>
+          <li><a href="/WEB/usuario/admin/admin_index.html">Panel de administración</a></li>
+          <li><a class="btn-login" href="/WEB/usuario/login/login.html">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <h1>Administrar Fixtures</h1>
+
+    <!-- Selección categoría -->
+    <form id="formCategoria" class="form" aria-label="Seleccionar categoría de fixture">
+      <label for="selectCategoria">Seleccionar Categoría:</label>
+      <select id="selectCategoria" required>
+        <option value="" disabled selected>-- Elige una categoría --</option>
+        <option value="juvenil">Juvenil</option>
+        <option value="mayores">Mayores</option>
+        <option value="femenino">Femenino</option>
+      </select>
+    </form>
+    <!-- Dentro del formCategoria, después del botón "Cargar Equipos" -->
+    <button type="button" id="btnAbrirModal">Cargar Equipo Nuevo</button>
+
+        <!-- Modal para cargar equipo -->
+        <div id="modalEquipo" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modalTitulo" aria-modal="true" style="display:none;">
+        <div class="modal-content">
+            <button id="btnCerrarModal" aria-label="Cerrar ventana">×</button>
+            <h2 id="modalTitulo">Agregar Nuevo Equipo</h2>
+            <form id="formEquipo" aria-label="Formulario para agregar equipo">
+            <label for="nombreEquipo">Nombre del equipo:</label>
+            <input type="text" id="nombreEquipo" name="nombreEquipo" required />
+
+            <label for="logoEquipo">Logo del equipo:</label>
+            <input type="file" id="logoEquipo" name="logoEquipo" accept="image/*" required />
+
+            <button type="submit">Guardar Equipo</button>
+            </form>
+        </div>
+        </div>
+
+    <!-- Crear fixture -->
+    <form id="formFixture" class="form" aria-label="Crear fixture" style="margin-top: 1rem;" hidden>
+      <label for="equipoA">Equipo Local:</label>
+      <select id="equipoA" required>
+        <!-- Opciones cargadas dinámicamente -->
+      </select>
+
+      <label for="equipoB">Equipo Visitante:</label>
+      <select id="equipoB" required>
+        <!-- Opciones cargadas dinámicamente -->
+      </select>
+
+      <button type="submit">Agregar Fixture</button>
+    </form>
+
+    <!-- Tabla de fixtures -->
+    <table class="tabla" aria-label="Tabla de fixtures creados" style="margin-top: 1rem;">
+      <thead>
+        <tr>
+          <th>Categoría</th>
+          <th>Equipo A</th>
+          <th>Equipo B</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="tablaFixtures">
+        <!-- Fixtures creados -->
+      </tbody>
+    </table>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Club Almagro. Todos los derechos reservados.</p>
+      <nav class="social">
+        <a href="#" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><img src="/img/facebook.svg" alt="Facebook" title="Facebook" /></a>
+        <a href="#" aria-label="Twitter" target="_blank" rel="noopener noreferrer"><img src="/img/X.svg" alt="Twitter" title="Twitter" /></a>
+        <a href="#" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><img src="/img/instagram.svg" alt="Instagram" title="Instagram" /></a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="fixtureCRUD.js"></script>
+</body>
+</html>

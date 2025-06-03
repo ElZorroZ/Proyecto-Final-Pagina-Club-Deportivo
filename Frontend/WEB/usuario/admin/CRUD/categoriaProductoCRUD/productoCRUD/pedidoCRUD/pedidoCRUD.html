@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Administrar Pedidos</title>
+  <link rel="stylesheet" href="pedidoCRUD_styles.css" />
+</head>
+<body>
+  <header>
+    <div class="container header">
+      <a href="/index.html" aria-label="Página principal Club Almagro">
+        <img src="/img/logo.png" alt="Logo del Club Almagro" class="logo" />
+      </a>
+      <nav aria-label="Menú principal">
+        <!-- Menú igual que el que mostraste -->
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <h1>Gestión de Pedidos</h1>
+
+    <section class="form">
+      <label for="metodoEnvioDefault">Método de envío predeterminado para nuevos pedidos:</label>
+      <select id="metodoEnvioDefault">
+        <option value="retiro">Retiro en el Club</option>
+        <option value="envio-domicilio">Envío a Domicilio</option>
+        <option value="correo">Correo Argentino</option>
+      </select>
+      <button onclick="guardarMetodoEnvioDefault()">Guardar Método Predeterminado</button>
+    </section>
+
+    <table class="tabla">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Usuario</th>
+          <th>Método de Pago</th>
+          <th>Estado</th>
+          <th>Reembolso</th>
+          <th>Método de Envío</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="tablaPedidos">
+        <!-- Filas dinámicas -->
+      </tbody>
+    </table>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Club Almagro. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="pedidos.js"></script>
+</body>
+</html>

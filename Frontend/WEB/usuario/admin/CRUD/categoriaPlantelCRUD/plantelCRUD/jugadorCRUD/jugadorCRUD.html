@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CRUD de Jugadores</title>
+  <link rel="stylesheet" href="jugadorCRUD_styles.css" />
+</head>
+<body>
+  <header>
+    <div class="container header">
+      <a href="/index.html" aria-label="Página principal Club Almagro">
+        <img src="/img/logo.png" alt="Logo del Club Almagro" class="logo" />
+      </a>
+      <nav aria-label="Menú principal">
+        <!-- Menú omitido por brevedad -->
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <h1>Gestión de Jugadores</h1>
+
+    <form id="jugador-form">
+      <h2>Datos del Jugador</h2>
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" name="nombre" required />
+
+      <label for="foto">Foto (URL)</label>
+      <input type="text" id="foto" name="foto" placeholder="https://..." />
+
+      <label for="nacimiento">Fecha de Nacimiento</label>
+      <input type="date" id="nacimiento" name="nacimiento" required />
+
+      <h2>Estadísticas de Partido</h2>
+      <label for="goles">Goles</label>
+      <input type="number" id="goles" name="goles" min="0" value="0" />
+
+      <label for="asistencias">Asistencias</label>
+      <input type="number" id="asistencias" name="asistencias" min="0" value="0" />
+
+      <label for="minutos">Minutos Jugados</label>
+      <input type="number" id="minutos" name="minutos" min="0" value="0" />
+
+      <button type="submit">Guardar Jugador</button>
+      <button type="button" id="reset-btn">Limpiar Formulario</button>
+    </form>
+
+    <hr />
+
+    <h2>Jugadores Registrados</h2>
+    <table id="tabla-jugadores">
+      <thead>
+        <tr>
+          <th>Foto</th>
+          <th>Nombre</th>
+          <th>Nacimiento</th>
+          <th>Goles</th>
+          <th>Asistencias</th>
+          <th>Minutos</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Jugadores cargados dinámicamente -->
+      </tbody>
+    </table>
+  </div>
+
+    <script src="jugadorCRUD.js"></script>
+</body>
+</html>

@@ -1,0 +1,353 @@
+/* plantel_styles.css */
+
+/* estilos.css */
+
+/* Reset y base */
+html, body {
+  height: 100%;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #ffffff;
+    color: #000000;
+    line-height: 1.6;
+    font-size: 16px;
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1;
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: #003366;
+  color: white;
+  padding: 1rem 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.logo {
+  max-height: 50px;
+  vertical-align: middle;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: #0059b3;
+  outline: none;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #003366;
+  border-radius: 0 0 6px 6px;
+  min-width: 140px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  z-index: 10;
+}
+
+.dropdown-menu li {
+  padding: 0;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.5rem 1rem;
+  font-weight: 400;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu {
+  display: block;
+}
+
+/* Botón login */
+.btn-login {
+  background-color: #000000;
+  color: #ffffff !important;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  border: 2px solid white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-login:hover,
+.btn-login:focus {
+  background-color: #0059b3;
+  color: white !important;
+  border-color: #0059b3;
+  outline: none;
+}
+/* Footer */
+.footer {
+  background-color: #003366;
+  color: white;
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+.footer .social {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.footer .social img {
+  width: 24px;
+  height: 24px;
+}
+.footer .social a {
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.footer .social a:hover,
+.footer .social a:focus {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+  outline: none;
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  flex: 1;
+}
+
+/* Títulos */
+h1, h2 {
+  text-align: center;
+  color: #004080;
+  margin-bottom: 1rem;
+}
+
+/* Formulario general */
+form {
+  background: white;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+}
+
+form label {
+  display: block;
+  font-weight: 600;
+  margin: 0.8rem 0 0.3rem;
+  color: #003366;
+}
+
+form input[type="text"],
+form input[type="date"],
+form select {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  font-size: 1rem;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="date"]:focus,
+form select:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* Jugadores container */
+#jugadores-container {
+  margin-top: 1rem;
+  max-height: 600px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  background: #fafafa;
+}
+
+/* Cada jugador */
+.jugador-form {
+  border-bottom: 1px solid #ddd;
+  padding: 0.5rem 0;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.jugador-form:last-child {
+  border-bottom: none;
+}
+
+/* Inputs jugador */
+.jugador-form input[type="text"],
+.jugador-form input[type="date"],
+.jugador-form select {
+  flex: 1 1 200px;
+  font-size: 0.95rem;
+}
+
+/* Labels jugador */
+.jugador-form label {
+  flex-basis: 120px;
+  font-weight: 500;
+  color: #004080;
+  margin-bottom: 0.2rem;
+}
+
+/* Botones */
+button {
+  background-color: #0059b3;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.3rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+  margin-top: 1rem;
+  display: inline-block;
+}
+
+button:hover,
+button:focus {
+  background-color: #004080;
+  outline: none;
+}
+
+/* Tabla de planteles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+thead {
+  background-color: #003366;
+  color: white;
+}
+
+thead th {
+  padding: 0.8rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+tbody td {
+  padding: 0.8rem;
+  border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+  background-color: #f0f8ff;
+  cursor: pointer;
+}
+
+/* Acciones (botones editar y eliminar) en tabla */
+.btn-accion {
+  margin-right: 0.5rem;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  color: white;
+}
+
+.btn-editar {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.btn-editar:hover {
+  background-color: #e0a800;
+}
+
+.btn-eliminar {
+  background-color: #dc3545;
+}
+
+.btn-eliminar:hover {
+  background-color: #c82333;
+}
+
+/* Mensajes de error o aviso */
+.error-msg {
+  color: #dc3545;
+  font-weight: 600;
+  margin-top: 0.3rem;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 720px) {
+  .jugador-form {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .jugador-form label {
+    flex-basis: auto;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 1.2rem;
+  }
+}

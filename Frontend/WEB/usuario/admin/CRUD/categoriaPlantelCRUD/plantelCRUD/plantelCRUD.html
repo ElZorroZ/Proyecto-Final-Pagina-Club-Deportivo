@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CRUD Planteles y Jugadores</title>
+  <link rel="stylesheet" href="plantelCRUD_styles.css" />
+</head>
+<body>
+       <!-- Header -->
+  <header>
+    <div class="container header">
+      <a href="/index.html" aria-label="Página principal Club Almagro">
+        <img src="/img/logo.png" alt="Logo del Club Almagro" class="logo" />
+      </a>
+      <nav aria-label="Menú principal">
+        <ul>
+          <li><a href="/index.html">Inicio</a></li>
+          <li><a href="/WEB/publicacion/publicacion_index.html">Novedades</a></li>
+          <li class="dropdown">
+            <a href="#">Club</a>
+            <ul class="dropdown-menu">
+              <li><a href="/WEB/historia/historia_index.html">Historia</a></li>
+              <li><a href="/WEB/estatuto/estatuto_index.html">Estatuto</a></li>
+              <li><a href="/WEB/autoridades/autoridades_index.html">Autoridades</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#">Fútbol</a>
+            <ul class="dropdown-menu">
+              <li><a href="/WEB/actividad/futbol_profesional/futbol_profesional_index.html">Fútbol Profesional</a></li>
+              <li><a href="#">Ejemplo 2</a></li>
+              <li><a href="#">Ejemplo 3</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#">Actividades</a>
+            <ul class="dropdown-menu">
+              <li><a href="/WEB/actividad/basquet/basquet_index.html">Básquet</a></li>
+              <li><a href="#">Ejemplo 2</a></li>
+              <li><a href="#">Ejemplo 3</a></li>
+            </ul>
+          </li>
+          <li><a href="/WEB/tienda/tienda_index.html">Tienda</a></li>
+          <li><a href="/WEB/usuario/admin/admin_index.html">Panel de administración	</a></li>
+          <li><a class="btn-login" href="/WEB/usuario/login/login.html">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="container">
+    <h1>Gestión de Planteles</h1>
+
+    <!-- Formulario para crear o editar un plantel -->
+    <form id="plantel-form">
+      <h2>Datos del Plantel</h2>
+
+      <label for="nombre-plantel">Nombre del Plantel</label>
+      <input type="text" id="nombre-plantel" name="nombrePlantel" placeholder="Ej: Plantel A" required />
+
+      <label for="categoria">Categoría</label>
+      <select id="categoria" name="categoria" required>
+        <option value="" disabled selected>Seleccione una categoría</option>
+        <option value="juvenil">Juvenil</option>
+        <option value="mayores">Mayores</option>
+        <option value="infantil">Infantil</option>
+      </select>
+
+      <h2>Jugadores</h2>
+      <div id="jugadores-container">
+        <!-- Aquí se agregarán los formularios de los jugadores dinámicamente -->
+      </div>
+
+      <button type="button" id="agregar-jugador-btn">+ Agregar Jugador</button>
+      <button type="submit" id="guardar-plantel-btn">Guardar Plantel</button>
+    </form>
+
+    <hr />
+
+    <!-- Tabla de planteles existentes -->
+    <h2>Planteles Registrados</h2>
+    <table id="tabla-planteles" aria-label="Lista de planteles">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Categoría</th>
+          <th>Fecha de Creación</th>
+          <th>Jugadores</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Aquí se cargarán los planteles -->
+      </tbody>
+    </table>
+  </div>
+  <script src="plantelCRUD.js"></script>
+
+</body>
+</html>
